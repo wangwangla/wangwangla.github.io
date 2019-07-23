@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			body,div,p{
+				padding: 0px;
+				margin: 0px;
+			}
+			ul,li{
+				list-style: none;
+			}
+			iframe{
+				width: 99%;
+				height: 100%;
+			}
+			.header{
+				width: 100%;
+				height: 60px;
+				background-color: #2F4056;
+				text-align: center;
+			}
+			.header p{
+				font:100 30px/60px "微软雅黑";
+				color: white;
+			}
+			.content{
+				height: 575px;
+				background-color: #777777;
+			}
+			.serch{
+				height: 60px;
+				background-color: #cccccc;
+				text-align: center;
+			}
+			.serch span{
+				color: white;
+				font: 100 20px/60px "微软雅黑";
+			}
+			.jiexi{
+				height: 84%;
+			}
+			.jiexi .urls{
+				width: 15%;
+				background-color: white;
+				float: left;
+				height: 99%;
+			}
+			#video{
+				float: right;
+				background-color: #FFFFFF;
+				width: 84%;
+				margin-top: 5px;
+				margin-right: 5px;
+				height: 98%;
+				
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+				font:100 20px/30px "微软雅黑";
+			}
+			a:hover{
+				color: blue;
+			}
+			.footer{
+				background-color: #CCCCCC;
+				height: 30px;
+				text-align: center;
+			}
+			#video a{
+				text-align: center;
+				position: fixed;
+				bottom: 50%;
+				left: 50%;
+				
+			}
+		</style>
+		<title>电影解析接口</title>
+	</head>
+	<body>
+		<div class="header">
+			<p>电影解析接口</p>
+		</div>	
+			<div class="content">
+				<div class="serch">
+					<span>选择解析接口：</span>
+					<select id="select">
+					  	<option value="http://app.baiyug.cn:2019/vip/index.php?url=" selected="selected">百域阁</option>
+					  	<option value="http://api.baiyug.cn/vip/index.php?url=">优酷接口</option>
+					  	<option value="http://000o.cc/jx/ty.php?url=" >通用解析</option>
+					  	<option value="http://www.sfsft.com/admin.php?url=">万能接口一</option>
+					  	<option value="http://aikan-tv.com/?url=">爱奇艺</option>
+					  	<option value="http://jqaaa.com/jx.php?url=">万能接口二</option>
+					  	<option value="http://y.mt2t.com/lines?url=" >万能接口三</option>
+					  	<option value="http://jiexi.071811.cc/jx2.php?url=">万能接口四</option>
+					  	<option value="http://www.662820.com/xnflv/index.php?url=">万能接口五</option>
+					  	<option value="http://api.91exp.com/svip/?url=">万能接口六</option>
+					  	<option value="http://player.jidiaose.com/supapi/iframe.php?v=" >万能接口七</option>
+					  	<option value="http://www.82190555.com/index/qqvod.php?url=">腾讯视频接口</option>
+					  	<option value="http://api.pucms.com/?url=">爱奇艺超清接口一</option>
+					  	<option value="http://api.baiyug.cn/vip/index.php?url=" >爱奇艺超清接口二</option>
+					  	<option value="https://api.flvsp.com/?url=">爱奇艺超清接口三</option>
+					  	<option value="http://api.xfsub.com/index.php?url=">芒果TV超清接口</option>
+					  	<option value="http://65yw.2m.vc/chaojikan.php?url=">芒果TV手机接口</option>
+					  	<option value="http://www.82190555.com/index/qqvod.php?url=" >优酷超清接口</option>
+					  	<option value="http://vip.jlsprh.com/index.php?url=">搜狐视频接口</option>
+					  	<option value="http://2gty.com/apiurl/yun.php?url=">乐视视频接口</option>
+					</select>
+					<span>地址：</span><input type="text" id="url" style="width: 200px; height: 20px; border-radius: 40px;"/><button id="button">播放</button>
+				</div>
+				<div class="jiexi">
+					<div class="urls">
+						<ul>
+							<a href="http://www.iqiyi.com/" target="_blank"><li>爱奇艺</li></a>
+							<a href="http://www.youku.com/" target="_blank"><li>优酷</li></a>
+							<a href="http://v.qq.com/" target="_blank"><li>腾讯</li></a>
+							<a href="http://www.mgtv.com/" target="_blank"><li>芒果</li></a>
+							<a href="http://tv.sohu.com/" target="_blank"><li>搜狐视频</li></a>
+							<a href="http://www.youku.com/" target="_blank"><li>优酷</li></a>
+							<a href="http://www.pptv.com/" target="_blank"><li>PPTV聚力</li></a>
+							<a href="http://www.le.com/" target="_blank"><li>乐视TV</li></a>
+							<a href="http://www.tudou.com/" target="_blank"><li>土豆</li></a>
+							<a href="http://www.1905.com/" target="_blank"><li>1905</li></a>
+						</ul>
+					</div>
+					<div id="video">
+						<a href="https://www.kancloud.cn/book/wangwangla/biji/preview/vip%E8%A7%86%E9%A2%91%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.md" style="color: red; font: 100  27px/27px 'arial black'">查看操作步骤</a>
+						</div>
+				</div>
+				<div class="footer">
+					仅作为娱乐，增强学习兴趣。<a href="https://www.kancloud.cn/book/wangwangla/biji/preview/vip%E8%A7%86%E9%A2%91%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.md" style="color: red; font: 100  27px/27px 'arial black'">查看操作步骤</a>
+					<!--https://www.iqiyi.com/v_19rrf9pkpc.html-->
+				</div>
+			</div>
+		<script>
+			var select = document.getElementById("select");
+			var button = document.getElementById("button");
+			var url = document.getElementById("url");
+			var video = document.getElementById("video");
+			
+			button.onclick=function(){
+				var ur1=select.value;
+				var ur2=url.value;
+				var v = '<iframe src="'+ur1+ur2+'"name="iframe_a"></iframe>';
+				console.log(ur1+ur2);
+				video.innerHTML=v;
+			};
+		</script>
+	</body>
+</html>

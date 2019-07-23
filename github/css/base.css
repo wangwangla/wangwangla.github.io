@@ -1,0 +1,25 @@
+body,p,div,ul,li{
+	margin: 0px;
+	padding: 0px;
+}
+input{
+	border: none;
+}
+button{
+	border: none;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+body{
+	background-color: #EEEEEE;
+}
+a{
+	color: black;
+}
+a:hover{
+	color: #009933;
+}

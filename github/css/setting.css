@@ -1,0 +1,37 @@
+.content {
+	width: 100%;
+}
+.content .header{
+	height: 140px;
+	background-color: #009933;
+}
+.content .header img{
+	height: 60px;
+	float: left;
+	border-radius: 50%;
+	margin: 20px 25px;
+}
+.content .header .top{
+	padding-top: 17px;
+	font-size: 30px;
+}
+.content .header .join{
+	padding-top: 3px;
+	font-size: 20px;
+	color: #666;
+}
+
+.content .list {
+	width: 96%;
+	margin: 0 auto;
+}
+.content .list ul{
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+}
+.content .list li{
+	margin:0 7px;
+	border-bottom: 2px solid black;
+	line-height: 30px;
+}

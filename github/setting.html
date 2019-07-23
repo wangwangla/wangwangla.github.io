@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+  	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/setting.css" />
+ 		<style>
+ 			.footer{
+	height: 39px;
+	background-color:#FFFFFF;
+	border-top: 1px solid black;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+.footer span{
+	text-align: center;
+	font: 100 20px/40px "微软雅黑";
+}
+.footer a{
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+}
+ 		</style>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				<div style="padding: 10px;"><a href="Home.html">返回</a></div>
+				<div  id="header"></div>
+			</div>
+			<div class="list">
+				<ul>
+					<li><a href="Home.html">Resopitry</a></li>
+					<li>Theme</li>
+					<li><a href="star.html">star</a></li>
+					<li><a href="follow.html">Follow</a></li>
+					<li><a href="logo.html">sign out</a></li>
+				</ul>
+			</div>
+				<div class="foote"></div>
+		</div>
+	</body>
+	
+	<script>
+		$(document).ready(function () {
+	         $('.foote').load('foot.html');
+	         $.ajax({
+	       			type:"get",
+	       			url:"https://api.github.com/users/wangwangla",
+	       			async:true,
+	       			success:function(result){
+	       				console.log(result);
+	       				
+	       				var str="";
+	       				var ullist = document.getElementById("header");
+	       		
+	       				str+='<img src="'+result.avatar_url+'" /><p class="top">'+result.login+'</p><p class="join">join in '+(result.created_at).substring(0,10)+'</p>';
+	       			/*	str+='<a href="info.html"><li><img src="img/h5p.jpg" width="80px" />'
+	       			*/
+	       				/*str+='<a href="'+result[i].html_url+'"><li><img src="'+result[i].owner.avatar_url+'" width="80px" />'
+	       			str+='<span class="title">'+result[i].name+'</span>'
+	       				str+='<p class="star">create:'+result[i].created_at+'</p>'
+	       				str+='<p class="update">clone:'+clone+'</p></li></a>'
+	       				}
+	       				*/
+	       				ullist.innerHTML=str;
+	       			}
+	       		});	
+	      });
+	 
+	</script>
+</html>
