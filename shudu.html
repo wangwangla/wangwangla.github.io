@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <script src="https://code.jquery.com/jquery-1.4.1.min.js"></script>
+  </head>
+
+  <style type="text/css">
+    input {
+      width: 20px;
+    }
+  </style>
+
+  <body>
+    <title>Sudoku</title>
+
+    <h1 align="center">Sudoku</h1>
+
+    <!-- div_row_1 -->
+    <div align="center" class="div_row_1">
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_01" class="block_1 line_1 row_1"></td>
+            <td><input type="text" locked="false" id="id_02" class="block_1 line_1 row_2"></td>
+            <td><input type="text" locked="false" id="id_03" class="block_1 line_1 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_04" class="block_1 line_2 row_1"></td>
+            <td><input type="text" locked="false" id="id_05" class="block_1 line_2 row_2"></td>
+            <td><input type="text" locked="false" id="id_06" class="block_1 line_2 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_07" class="block_1 line_3 row_1"></td>
+            <td><input type="text" locked="false" id="id_08" class="block_1 line_3 row_2"></td>
+            <td><input type="text" locked="false" id="id_09" class="block_1 line_3 row_3"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_10" class="block_2 line_1 row_4"></td>
+            <td><input type="text" locked="false" id="id_11" class="block_2 line_1 row_5"></td>
+            <td><input type="text" locked="false" id="id_12" class="block_2 line_1 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_13" class="block_2 line_2 row_4"></td>
+            <td><input type="text" locked="false" id="id_14" class="block_2 line_2 row_5"></td>
+            <td><input type="text" locked="false" id="id_15" class="block_2 line_2 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_16" class="block_2 line_3 row_4"></td>
+            <td><input type="text" locked="false" id="id_17" class="block_2 line_3 row_5"></td>
+            <td><input type="text" locked="false" id="id_18" class="block_2 line_3 row_6"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_19" class="block_3 line_1 row_7"></td>
+            <td><input type="text" locked="false" id="id_20" class="block_3 line_1 row_8"></td>
+            <td><input type="text" locked="false" id="id_21" class="block_3 line_1 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_22" class="block_3 line_2 row_7"></td>
+            <td><input type="text" locked="false" id="id_23" class="block_3 line_2 row_8"></td>
+            <td><input type="text" locked="false" id="id_24" class="block_3 line_2 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_25" class="block_3 line_3 row_7"></td>
+            <td><input type="text" locked="false" id="id_26" class="block_3 line_3 row_8"></td>
+            <td><input type="text" locked="false" id="id_27" class="block_3 line_3 row_9"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- div_row_2 -->
+    <div align="center" class="div_row_2">
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_28" class="block_4 line_4 row_1"></td>
+            <td><input type="text" locked="false" id="id_29" class="block_4 line_4 row_2"></td>
+            <td><input type="text" locked="false" id="id_30" class="block_4 line_4 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_31" class="block_4 line_5 row_1"></td>
+            <td><input type="text" locked="false" id="id_32" class="block_4 line_5 row_2"></td>
+            <td><input type="text" locked="false" id="id_33" class="block_4 line_5 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_34" class="block_4 line_6 row_1"></td>
+            <td><input type="text" locked="false" id="id_35" class="block_4 line_6 row_2"></td>
+            <td><input type="text" locked="false" id="id_36" class="block_4 line_6 row_3"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_37" class="block_5 line_4 row_4"></td>
+            <td><input type="text" locked="false" id="id_38" class="block_5 line_4 row_5"></td>
+            <td><input type="text" locked="false" id="id_39" class="block_5 line_4 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_40" class="block_5 line_5 row_4"></td>
+            <td><input type="text" locked="false" id="id_41" class="block_5 line_5 row_5"></td>
+            <td><input type="text" locked="false" id="id_42" class="block_5 line_5 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_43" class="block_5 line_6 row_4"></td>
+            <td><input type="text" locked="false" id="id_44" class="block_5 line_6 row_5"></td>
+            <td><input type="text" locked="false" id="id_45" class="block_5 line_6 row_6"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_46" class="block_6 line_4 row_7"></td>
+            <td><input type="text" locked="false" id="id_47" class="block_6 line_4 row_8"></td>
+            <td><input type="text" locked="false" id="id_48" class="block_6 line_4 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_49" class="block_6 line_5 row_7"></td>
+            <td><input type="text" locked="false" id="id_50" class="block_6 line_5 row_8"></td>
+            <td><input type="text" locked="false" id="id_51" class="block_6 line_5 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_52" class="block_6 line_6 row_7"></td>
+            <td><input type="text" locked="false" id="id_53" class="block_6 line_6 row_8"></td>
+            <td><input type="text" locked="false" id="id_54" class="block_6 line_6 row_9"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- div_row_3 -->
+    <div align="center" class="div_row_3">
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_55" class="block_7 line_7 row_1"></td>
+            <td><input type="text" locked="false" id="id_56" class="block_7 line_7 row_2"></td>
+            <td><input type="text" locked="false" id="id_57" class="block_7 line_7 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_58" class="block_7 line_8 row_1"></td>
+            <td><input type="text" locked="false" id="id_59" class="block_7 line_8 row_2"></td>
+            <td><input type="text" locked="false" id="id_60" class="block_7 line_8 row_3"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_61" class="block_7 line_9 row_1"></td>
+            <td><input type="text" locked="false" id="id_62" class="block_7 line_9 row_2"></td>
+            <td><input type="text" locked="false" id="id_63" class="block_7 line_9 row_3"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_64" class="block_8 line_7 row_4"></td>
+            <td><input type="text" locked="false" id="id_65" class="block_8 line_7 row_5"></td>
+            <td><input type="text" locked="false" id="id_66" class="block_8 line_7 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_67" class="block_8 line_8 row_4"></td>
+            <td><input type="text" locked="false" id="id_68" class="block_8 line_8 row_5"></td>
+            <td><input type="text" locked="false" id="id_69" class="block_8 line_8 row_6"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_70" class="block_8 line_9 row_4"></td>
+            <td><input type="text" locked="false" id="id_71" class="block_8 line_9 row_5"></td>
+            <td><input type="text" locked="false" id="id_72" class="block_8 line_9 row_6"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" style="display: inline-block;">
+        <tbody>
+          <tr>
+            <td><input type="text" locked="false" id="id_73" class="block_9 line_7 row_7"></td>
+            <td><input type="text" locked="false" id="id_74" class="block_9 line_7 row_8"></td>
+            <td><input type="text" locked="false" id="id_75" class="block_9 line_7 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_76" class="block_9 line_8 row_7"></td>
+            <td><input type="text" locked="false" id="id_77" class="block_9 line_8 row_8"></td>
+            <td><input type="text" locked="false" id="id_78" class="block_9 line_8 row_9"></td>
+          </tr>
+          <tr>
+            <td><input type="text" locked="false" id="id_79" class="block_9 line_9 row_7"></td>
+            <td><input type="text" locked="false" id="id_80" class="block_9 line_9 row_8"></td>
+            <td><input type="text" locked="false" id="id_81" class="block_9 line_9 row_9"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- information -->
+    <div align="center" style="margin-top: 10px">
+      <span id="info" style="font-size: 14px;">...</span>
+    </div>
+
+    <!-- button -->
+    <div align="center" style="margin-top: 20px">
+      <button id="lock"  style="width: 70px;" onclick="make_input_disabled_or_not()">Lock</button>
+      <button id="clear"  style="margin-left: 10px; margin-right: 10px; width: 70px;" onclick="clear_the_board()">Clear</button>
+      <button id="solve" style="width: 70px;" onclick="solve_the_problem()">Solve</button>
+    </div>
+
+    <!-- footer -->
+    <div id="copyright" align="center" style="margin-top: 40px; font-size: 14px;"></div>
+
+    <script>
+      // restrict input maxlength as 1
+      $("input").attr("maxlength", "1");
+
+      // make input only accept numbers
+      $("input").keyup(function() {
+        if (new RegExp("[0-9]").test(event.target.value) == false) {
+          event.target.value = "";
+        }
+      });
+
+      // set copyright infos
+      copyright.innerHTML =  "送给人见人爱，花见花开的爬姨！\n 在强大的梦想 也比不过傻逼似的坚持   --- 见贤思齐先生";
+
+      function make_input_disabled_or_not() {
+        var is_disabled = $("input").attr("disabled");
+
+        // already disabled, make it free
+        if (is_disabled) {
+          $("input").attr("disabled", "");
+          $("input").attr("locked", "false");
+          $("#lock").text("Lock");
+        }
+        // not disabled, make it locked
+        else {
+          $("input").attr("disabled", "disabled");
+          $("#lock").text("Unlock");
+
+          var list = $("input");
+          for (var i = 0; i < list.length; i++) {
+            var node = list[i];
+            if (node.value != "") {
+              node.setAttribute("locked", "true");
+              node.style.backgroundColor = "lightblue";
+            }
+          }
+        }
+      }
+
+      function clear_the_board() {
+        var is_disabled = $("input").attr("disabled");
+
+        if (!is_disabled) {
+          if(!confirm("It's not locked, are you sure to clear?")) {
+            return;
+          }
+        }
+
+        var list = $("input");
+        for (var i = 0; i < list.length; i++) {
+          var node = list[i];
+          if (node.getAttribute("locked") == "false") {
+            node.value = "";
+            node.style.backgroundColor = "";
+            $("#info").text("...").css("color", "black");
+          }
+        }
+      }
+
+      // console.log();
+
+      function check_list_validation(list) {
+        var dict = new Array();
+        for (i = 0; i < list.length; i++) {
+          var value = list[i].value;
+          if (value == "") {
+            continue;
+          }
+          value = parseInt(value);
+          if (dict[value]) {
+            return false;
+          }
+          else {
+            dict[value] = 1;
+          }
+        }
+        return true;
+      }
+
+      function get_used_numbers(className) {
+        var zone = $("." + className);
+        var list = [];
+        for (i = 0; i < zone.length; i++) {
+          var value = zone[i].value;
+          value = parseInt(value);
+          if (value) {
+            list.push(value);
+          }
+        }
+        return list;
+      }
+
+      function get_available_numbers(className, available_numbers) {
+        var zone = $("." + className);
+        var list = [];
+        var used_numbers = get_used_numbers(className);
+        for (var i = 0; i < available_numbers.length; i++) {
+          if ($.inArray(available_numbers[i], used_numbers) == -1) {
+            list.push(available_numbers[i]);
+          }
+        }
+        return list;
+      }
+
+      function get_available_numbers_by_node(node) {
+        var available_numbers = [1, 2, 3 ,4, 5, 6, 7, 8, 9];
+        var classNames = node.className.split(" ");
+        for (var j = 0; j < classNames.length; j++) {
+          var className = classNames[j];
+          available_numbers = get_available_numbers(className, available_numbers);
+        }
+        return available_numbers;
+      }
+
+      function recursive_process(list, base_numbers) {
+        if (base_numbers.length == 0) {
+          if (list.length == 0) {
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+
+        // for all list
+        for (var i = 0; i < list.length; i++) {
+          var node = list[i];
+
+          if (node.value != "") {
+            continue;
+          }
+          
+          var available_numbers = get_available_numbers_by_node(node);
+
+          // for all available_numbers
+          for (var k = 0; k < available_numbers.length; k++) {
+            node.value = available_numbers[k];
+            var answer = recursive_process(list.slice(1), available_numbers);
+            if (answer) {
+              return true;
+            }
+            else {
+              node.value = "";
+            }
+          }
+          return false;
+        }
+
+        return true;
+      }
+
+      function check_all_nodes() {
+        var list = $("input");
+        for (var i = 0; i < list.length; i++) {
+          var node = list[i];
+          var classNames = node.className.split(" ");
+          for (var j = 0; j < classNames.length; j++) {
+            var className = classNames[j];
+            if (!check_list_validation($("." + className))) {
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+      function solve_the_problem() {
+        var is_disabled = $("input").attr("disabled");
+
+        if (!is_disabled) {
+         make_input_disabled_or_not(); 
+		 }
+
+        if (!check_all_nodes()) {
+          $("#info").text("Conflicted, double check?").css("color", "red");;
+          return;
+        }
+
+        $("#info").text("We are working hard on it...").css("color", "black");;
+
+        var input_list = $("input");
+        var base_numbers = [1, 2, 3 ,4, 5, 6, 7, 8, 9];
+
+        setTimeout(function(){
+          var answer = recursive_process(input_list, base_numbers);
+          if (answer) {
+            $("#info").text("Great, we did it!").css("color", "black");;
+          }
+          else {
+            $("#info").text("Sorry, it cannot be solved!").css("color", "black");;
+          }
+        }, 0);
+      }
+    </script>
+  </body>
+</html>
