@@ -31,20 +31,19 @@
 	<div class="content">
 	  <!--  <div><a href="biyeshejiyuanxing/index.html">原型设计</a></div>-->
 		<div class="x">
-		  	<h1 >我只能带着这些</h1>
-			<div><a href="yx2/index.htm">游戏1</a></div>
-			<div><a href="yx1/index.html">游戏2</a></div>
-			<div><a href="yx3/index.html">游戏3</a></div>
-			<div><a href="yx4/FlappyBall.html">游戏4</a></div>
-			<div><a href="biyeshejiqianduan/index.html">前端页面</a></div>
-			<div><a href="wish/wish.html">wish</a></div>
+		  	<h1 >爱生活，爱健康</h1>
+			<div><a href="yx2/index.htm">植物大战僵尸</a></div>
+			<div><a href="yx1/index.html">飞机大战</a></div>
+			<div><a href="yx3/index.html">捕鱼游戏</a></div>
+			<div><a href="yx4/FlappyBall.html">小鸟（等我完善）</a></div>
+			<div><a href="wish/wish.html">小伙伴都是怎莫夸爬姨的</a></div>
 			<div><a href="Move.html">免费看会员</a></div>			
 			<div ng-app="my" ng-controller="mys">
 			<audio autoplay="autoplay" loop="loop">
 		    	<source src="1.mp3" type="audio/mpeg">
 			</audio>
 			<ul ng-show="show">
-				<li style="list-style: none;">我的城市很冷，注意保暖</li>
+				<li style="list-style: none;">注意天气变化，注意保暖防暑</li>
 			    <li>城市：{{cityName}}</li>
 			    <li>日期:{{date}}</li>
 			    <li>最低温度{{mTemp}}</li>
@@ -59,7 +58,7 @@
     var u3="&key=545d63e185fc48169a43cbabba6e74d2";
     var my=angular.module("my",[]);
     my.controller("mys",function ($scope,$http) {
-      $scope.city="西安";
+      $scope.city="太原";
       $scope.show=false;
       
           u2=$scope.city;
