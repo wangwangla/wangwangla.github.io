@@ -22,7 +22,6 @@ canvas {
     <source src="背景音乐.mp3" type="audio/mpeg">
 </audio>
 <canvas id="canvas"></canvas>
-<a href="index.html" style="font-color='white'"><span style="font-size:90px;font-color:white" >NEXT<span></a>
 
 <script>
 // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
@@ -231,7 +230,7 @@ function loop() {
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
 	ctx.globalCompositeOperation = 'lighter';
 	
-    var text = "老大,提前生日快乐+新年快乐 !!";  
+    var text = "留恋小朋友,生日快乐，生意兴隆 !!";  
   ctx.font = "50px sans-serif";
   var textData = ctx.measureText(text);
   ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,255))+","+parseInt(random(0,255))+",0.3)";

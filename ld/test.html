@@ -88,17 +88,17 @@
 <body style="position:fixed">
 
 <div class="cs">
-    <a href="new 5.html"><img src="2.jpg" style="width: 120px; height: 110px;" id="logo"></a>
+    <a href="new 5.html"><img src="12.jpg" style="width: 120px; height: 110px;" id="logo"></a>
 </div>
+
+<!--//音乐可改-->
+<audio autoplay="autoplay" loop="loop">
+    <source src="背景音乐.mp3" type="audio/mpeg">
+</audio>
 
 <canvas class="canvas" width="1820" height="905"></canvas>
 
-<p class="text" style="color: #ed3073;">
-    时间飞逝，你的细胞已长：
-    <br/>
-    <span id="span_dt_dt"></span>
-</p>
-
+ 
 <script language="javascript">
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
@@ -125,7 +125,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("元宝大人|生日快乐&新年祝福|#countdown 3|#rectangle 15x15|#circle 12 |#time");
+            S.UI.simulate("爬姐姐大王|送你一句话|#countdown 3|#rectangle 65x65|#circle 72 |生日快乐");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -578,9 +578,5 @@
     }());
     S.init();
 </script>
-<!--//音乐可改-->
-<audio autoplay="autoplay" loop="loop">
-    <source src="背景音乐.mp3" type="audio/mpeg">
-</audio>
 </body>
 </html>
