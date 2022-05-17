@@ -23,6 +23,7 @@ canvas {
 </audio>
 <canvas id="canvas"></canvas>
 
+
 <script>
 // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
 // not supported in all browsers though and sometimes needs a prefix, so we need a shim
@@ -230,7 +231,7 @@ function loop() {
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
 	ctx.globalCompositeOperation = 'lighter';
 	
-    var text = "留恋小朋友,生日快乐，生意兴隆 !!";  
+    var text = "刘同学,万事无忧 !!";  
   ctx.font = "50px sans-serif";
   var textData = ctx.measureText(text);
   ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,255))+","+parseInt(random(0,255))+",0.3)";
